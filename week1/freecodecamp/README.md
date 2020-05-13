@@ -10,3 +10,4 @@
     * ```target="_blank"``` attribute causes the linked document to open in a new window tab.
     * ```href="#"``` creates a dead link.
 - ```ul``` is unordered list while ```ol``` is ordered list. ```li``` are list items.
+- Make your text ```input``` a ```required``` field, so that your user can't submit the form without completing this field.
