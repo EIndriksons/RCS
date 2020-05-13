@@ -9,3 +9,4 @@
 - ```a``` (anchor) elements can also be used to create internal links to jump to different sections within a webpage by assigning a link's ```href``` attribute to a hash symbol ```#``` plus the value of the ```id``` attribute for the element that you want to internally link to, usually further down the page.
     * ```target="_blank"``` attribute causes the linked document to open in a new window tab.
     * ```href="#"``` creates a dead link.
+- ```ul``` is unordered list while ```ol``` is ordered list. ```li``` are list items.
