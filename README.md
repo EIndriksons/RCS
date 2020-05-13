@@ -7,5 +7,5 @@ Web Development Camp for May-June 2020 by [Riga Coding School.](https://rigacodi
   * [Day 1](/week1/week1day1.md) - Introduction to Web Dev, Github
   * [Day 2](/week1/week1day2.md) - Visual Studio Code, Git
   * [Day 3](/week1/week1day3.md) - HTML5
-  * [Free Code Camp](/week1/freecodecamp) - Solutions to [www.freecodecamp.org](https://www.freecodecamp.org/)
+  * [Free Code Camp](/week1/freecodecamp) - Solutions to [www.freecodecamp.org](https://www.freecodecamp.org/) and Advanced HTML5 Tips and Tricks
 - [Homework 1](/homework1) - Simple tribute page
