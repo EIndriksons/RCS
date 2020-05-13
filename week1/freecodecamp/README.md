@@ -14,3 +14,4 @@
 - By wrapping an ```input``` element inside of a ```label``` element it will automatically associate the radio button input with the label element surrounding it.
     * All related radio buttons should have the same ```name``` attribute to create a radio button group.
     * It is considered best practice to set a ```for``` attribute on the ```label``` element, with a value that matches the value of the ```id``` attribute of the ```input``` element. This allows assistive technologies to create a linked relationship between the label and the child ```input``` element.
+    * Add ```checked``` to designate the checkbox or radio as the default option for the user.
