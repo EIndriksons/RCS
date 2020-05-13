@@ -11,3 +11,6 @@
     * ```href="#"``` creates a dead link.
 - ```ul``` is unordered list while ```ol``` is ordered list. ```li``` are list items.
 - Make your text ```input``` a ```required``` field, so that your user can't submit the form without completing this field.
+- By wrapping an ```input``` element inside of a ```label``` element it will automatically associate the radio button input with the label element surrounding it.
+    * All related radio buttons should have the same ```name``` attribute to create a radio button group.
+    * It is considered best practice to set a ```for``` attribute on the ```label``` element, with a value that matches the value of the ```id``` attribute of the ```input``` element. This allows assistive technologies to create a linked relationship between the label and the child ```input``` element.
