@@ -11,4 +11,5 @@ Web Development Camp for May-June 2020 by [Riga Coding School.](https://rigacodi
   * [Day 2](/week1/week1day2.md) - Visual Studio Code, Git
   * [Day 3](/week1/week1day3.md) - HTML5
   * [Day 4](/week1/week1day4.md) - CSS
+  * [Day 5](/week1/week1day5.md) - HTML5 & CSS
 - [Homework 1](/homework1) - Simple tribute page
