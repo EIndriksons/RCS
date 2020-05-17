@@ -8,10 +8,59 @@ html {
     box-sizing: inherit;
 }
 
-/* Container */
+/* Containers */
 body {
+    background: #ececec;
+}
+
+.container {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
+    
+    overflow: auto;
+    background: #ffffff;
+}
+
+.small-container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/* Header text */
+header>h1 {
+    margin: 20px 0px -50px 0px;
+    font-weight: bold;
+    color: #df1b21;
+}
+
+/* Header navigation buttons */
+nav {
+    margin: 20px 0px 40px 0px;
+}
+
+nav>a {
+    background: #df1b21;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* Main Content */
+main h2 {
+    background: #df1b21;
+    color: #ffffff;
+    margin: 20px 0px 20px 0px;
+    padding: 10px;
+}
+
+main h3 {
+    color: #df1b21;
+    margin: 0px 0px 20px 0px;
+    padding: 10px;
 }
