@@ -52,13 +52,13 @@ Relative units, such as `em` or `rem`, are relative to another length value. For
 - Finally, `!important` is the nuclear option which will override any other CSS
     * *Example - h1 will be pink, instead of white*
     ```css
-        <style>
-        .pink-text {
-            color: pink !important;
-        }
-        </style>
+    <style>
+    .pink-text {
+        color: pink !important;
+    }
+    </style>
 
-        <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
+    <h1 id="orange-text" class="pink-text blue-text" style="color: white">Hello World!</h1>
     ```
 - Additionally, browsers read CSS from top to bottom in order of their declaration. That means that, in the event of a conflict, the browser will use whichever CSS declaration came last.
     * *Example - blue color will be used, instead of pink*
@@ -72,3 +72,65 @@ Relative units, such as `em` or `rem`, are relative to another length value. For
     }
     ```
 - [Cheat Sheet](https://specifishity.com/) for all combinations
+
+## CSS Variables
+CSS Variables are a powerful way to change many CSS style properties at once by changing only one value.
+
+The variables have to be declared inside an element, which defines its scope. Therefore a common best practice is to define custom properties on the
+`:root` pseudo-class:
+```css
+:root {
+    --penguin-skin: gray;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+}
+```
+
+After you create your variable, you can assign its value to other CSS properties by referencing the name you gave it:
+```css
+.example {
+    background: var(--penguin-skin);
+}
+```
+
+You can attach a fallback value that your browser will revert to if the given variable is invalid:
+```css
+.example {
+    background: var(--penguin-skin, black, white);
+}
+```
+
+## Compatibility with Browser Fallbacks
+When working with CSS you will likely run into browser compatibility issues at some point. This is why it's important to provide browser fallbacks to avoid potential problems.
+
+When your browser parses the CSS of a webpage, it ignores any properties that it doesn't recognize or support. For example, if you use a CSS variable to assign a background color on a site, Internet Explorer will ignore the background color because it does not support CSS variables. In that case, the browser will use whatever value it has for that property. If it can't find any other value set for that property, it will revert to the default value, which is typically not ideal.
+
+This means that if you do want to provide a browser fallback, it's as easy as providing another more widely supported value immediately before your declaration. That way an older browser will have something to fall back on, while a newer browser will just interpret whatever declaration comes later in the cascade.
+
+Notice the two `background: red;` in the example below. In newer browsers the variable `background: var(--red-color);` will be used, in older browsers, it will just fall back to red variable.
+```css
+<style>
+  :root {
+    --red-color: red;
+  }
+  .red-box {
+    background: red;
+    background: var(--red-color);
+    height: 200px;
+    width:200px;
+  }
+</style>
+<div class="red-box"></div>
+
+```
+
+## Media Queries
+When your screen is smaller or larger than your media query break point, you can change the value of a variable, and it will apply its style wherever it is used.
+```css
+@media (max-width: 350px) {
+    :root {
+        --penguin-size: 200px;
+        --penguin-skin: black;
+    }
+}
+```
