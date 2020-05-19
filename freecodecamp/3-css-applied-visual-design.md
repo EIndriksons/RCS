@@ -67,3 +67,16 @@ One nuance with absolute positioning is that it will be locked relative to its c
 `fixed` is a type of absolute positioning that locks an element relative to the browser window. Similar to absolute positioning, it's used with the CSS offset properties and also removes the element from the normal flow of the document. Other items no longer "realize" where it is positioned, which may require some layout adjustments elsewhere.
 
 One key difference between the `fixed` and absolute positions is that an element with a fixed position won't move when the user scrolls. This is particularly useful for `navbar` implementations.
+
+## Float
+`float` elements are removed from the normal flow of a document and pushed to either the `left` or `right` of their containing parent element. It's commonly used with the `width` property to specify how much horizontal space the floated element requires.
+
+## Margin
+Another positioning technique is to center a block element horizontally. One way to do this is to set its `margin` to a value of `auto`.
+
+This method works for images, too. Images are inline elements by default, but can be changed to block elements when you set the `display` property to `block`.
+
+## Z-Index
+When elements are positioned to overlap (i.e. using `position: absolute | relative | fixed | sticky`), the element coming later in the HTML markup will, by default, appear on the top of the other elements. However, the `z-index` property can specify the order of how elements are stacked on top of one another. It must be an integer (i.e. a whole number and not a decimal), and higher values for the `z-index` property of an element move it higher in the stack than those with lower values.
+
+**Note:** [Funny article](https://psuter.net/2019/07/07/z-index) of the highest ever found z-index of number 9 repeated 1242 times.
