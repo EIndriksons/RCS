@@ -16,3 +16,4 @@ Web Development Camp for May-June 2020 by [Riga Coding School.](https://rigacodi
   * [Day 5](/week1/week1day5.md) - HTML5 & CSS
 - [Homework 1](/homework1) - Simple tribute page
 - [Week 2](/week2)
+  * [Day 3](/week2/week2day3.md) - CSS - Flexbox
