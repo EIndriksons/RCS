@@ -1,0 +1,34 @@
+/* Define all sections */
+body {
+    background: LightGray;
+    font-size: 1.5em;
+}
+
+header {
+    background: LightSkyBlue;
+}
+
+.hero {
+    background: PaleGreen;
+}
+
+main {
+    background: lightpink;
+}
+
+.ad {
+    background: crimson;
+}
+
+.sidebar {
+    background: BlanchedAlmond;
+}
+
+footer {
+    background: LightSalmon;
+}
+
+/* Display only mobile/tablet ad */
+.desktop-ad {
+    display: none;
+}
