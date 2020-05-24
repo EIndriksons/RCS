@@ -59,6 +59,11 @@ header .tools {
     grid-area: action;
 }
 
+.hero .feature {
+    background: rgb(68, 255, 68);
+    grid-area: feature;
+}
+
 /* Advertisement */
 .ad {
     background: crimson;
@@ -96,7 +101,14 @@ main .listing {
 /* Sidebar section */
 .sidebar {
     background: BlanchedAlmond;
+    padding: 10px;
+    grid-area: sidebar;
+
     display: none;
+}
+
+.sidebar .feature {
+    background: rgb(255, 208, 136);
 }
 
 /* Footer section */
@@ -113,4 +125,47 @@ footer {
 
 .hero .feature {
     display: none;
+}
+
+/* Tablet friendly layout */
+@media (min-width: 576px) {
+    body {
+        grid-template-areas:
+            "header"
+            "hero"
+            "body"
+            "sidebar"
+            "footer";
+    }
+
+    /* Change Header Layout */
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "brand nav tools";
+    }
+
+    /* Change Hero Layout */
+    .hero {
+        grid-template-areas:
+            "feature"
+            "action";
+    }
+
+    .hero .feature {
+        display: block;
+    }
+
+    /* Change Body Layout */
+    main {
+        grid-template-columns: 1fr 200px;
+        grid-template-areas:
+            "feature ad"
+            "listing listing";
+    }
+
+    /* Change Sidebar Layout */
+    .sidebar {
+        display: block;
+    }
 }
