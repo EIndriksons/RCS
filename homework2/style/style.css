@@ -1,10 +1,14 @@
 /* Define all sections */
 body {
     background: LightGray;
+    margin: 0;
     font-size: 1.5em;
+    text-align: center;
+    height: 100vh;
 
     display: grid;
     grid-gap: 10px;
+    
     grid-template-areas:
         "header"
         "hero"
@@ -135,9 +139,18 @@ footer {
     width: 350px;
 }
 
+.mobile-ad:hover {
+    opacity: 0.5;
+}
+
+.desktop-ad:hover {
+    opacity: 0.5;
+}
+
 /* Tablet friendly layout */
 @media (min-width: 576px) {
     body {
+        grid-template-rows: auto auto 1fr auto auto;
         grid-template-areas:
             "header"
             "hero"
@@ -167,6 +180,7 @@ footer {
     /* Change Body Layout */
     main {
         grid-template-columns: 1fr 200px;
+        grid-template-rows: auto 1fr;
         grid-template-areas:
             "feature ad"
             "listing listing";
@@ -174,7 +188,7 @@ footer {
 
     /* Change Sidebar Layout */
     .sidebar {
-        display: block;
+        display: grid;
     }
 
     .mobile-ad img {
@@ -186,6 +200,7 @@ footer {
 @media (min-width: 992px) {
     body {
         grid-template-columns: 1fr 350px;
+        grid-template-rows: auto auto 1fr auto;
         grid-template-areas:
             "header header"
             "hero ad"
@@ -203,6 +218,7 @@ footer {
     /* Change Body Layout */
     main {
         grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
         grid-template-areas:
             "feature listing"
     }
