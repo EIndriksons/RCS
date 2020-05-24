@@ -2,33 +2,115 @@
 body {
     background: LightGray;
     font-size: 1.5em;
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "header"
+        "hero"
+        "body"
+        "footer"
 }
 
+/* Header section */
 header {
     background: LightSkyBlue;
+    padding: 10px;
+    grid-area: header;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "brand brand"
+        "nav tools";
 }
 
+header .brand {
+    background: rgb(69, 184, 255);
+    grid-area: brand;
+}
+
+header nav {
+    background: rgb(69, 184, 255);
+    grid-area: nav;
+}
+
+header .tools {
+    background: rgb(69, 184, 255);
+    grid-area: tools;
+}
+
+/* Hero section */
 .hero {
     background: PaleGreen;
+    padding: 10px;
+    grid-area: hero;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        "action";
 }
 
-main {
-    background: lightpink;
+.hero .action {
+    background: rgb(68, 255, 68);
+    grid-area: action;
 }
 
+/* Advertisement */
 .ad {
     background: crimson;
 }
 
+/* Body section */
+main {
+    background: lightpink;
+    padding: 10px;
+    grid-area: body;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "feature"
+        "ad"
+        "listing";
+}
+
+main .feature {
+    background: rgb(255, 136, 154);
+    grid-area: feature;
+}
+
+main .ad {
+    grid-area: ad;
+}
+
+main .listing {
+    background: rgb(255, 136, 154);
+    grid-area: listing;
+}
+
+/* Sidebar section */
 .sidebar {
     background: BlanchedAlmond;
+    display: none;
 }
 
+/* Footer section */
 footer {
     background: LightSalmon;
+    padding: 10px;
+    grid-area: footer;
 }
 
-/* Display only mobile/tablet ad */
+/* Hide Sections which are not part of mobile */
 .desktop-ad {
+    display: none;
+}
+
+.hero .feature {
     display: none;
 }
