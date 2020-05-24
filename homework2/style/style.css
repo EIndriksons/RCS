@@ -85,7 +85,6 @@ main .feature {
 }
 
 main .mobile-ad {
-    background: crimson;
     grid-area: ad;
 }
 
@@ -103,7 +102,6 @@ footer {
 
 /* Hide Sections which are not part of mobile */
 .desktop-ad {
-    background: crimson;
     grid-area: ad;
     display: none;
 }
@@ -128,10 +126,12 @@ footer {
 
 /* Other */
 .mobile-ad img {
+    vertical-align: top;
     width: 100%;
 }
 
 .desktop-ad img {
+    vertical-align: top;
     width: 350px;
 }
 
