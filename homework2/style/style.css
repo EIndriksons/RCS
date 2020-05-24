@@ -64,11 +64,6 @@ header .tools {
     grid-area: feature;
 }
 
-/* Advertisement */
-.ad {
-    background: crimson;
-}
-
 /* Body section */
 main {
     background: lightpink;
@@ -89,13 +84,32 @@ main .feature {
     grid-area: feature;
 }
 
-main .ad {
+main .mobile-ad {
+    background: crimson;
     grid-area: ad;
 }
 
 main .listing {
     background: rgb(255, 136, 154);
     grid-area: listing;
+}
+
+/* Footer section */
+footer {
+    background: LightSalmon;
+    padding: 10px;
+    grid-area: footer;
+}
+
+/* Hide Sections which are not part of mobile */
+.desktop-ad {
+    background: crimson;
+    grid-area: ad;
+    display: none;
+}
+
+.hero .feature {
+    display: none;
 }
 
 /* Sidebar section */
@@ -109,22 +123,6 @@ main .listing {
 
 .sidebar .feature {
     background: rgb(255, 208, 136);
-}
-
-/* Footer section */
-footer {
-    background: LightSalmon;
-    padding: 10px;
-    grid-area: footer;
-}
-
-/* Hide Sections which are not part of mobile */
-.desktop-ad {
-    display: none;
-}
-
-.hero .feature {
-    display: none;
 }
 
 /* Tablet friendly layout */
@@ -166,6 +164,40 @@ footer {
 
     /* Change Sidebar Layout */
     .sidebar {
+        display: block;
+    }
+}
+
+/* Desktop friendly layout */
+@media (min-width: 992px) {
+    body {
+        grid-template-columns: 1fr 350px;
+        grid-template-areas:
+            "header header"
+            "hero ad"
+            "body sidebar"
+            "footer footer"
+    }
+
+    /* Change Hero Layout */
+    .hero {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "feature action"
+    }
+
+    /* Change Body Layout */
+    main {
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "feature listing"
+    }
+
+    .mobile-ad {
+        display: none;
+    }
+
+    .desktop-ad {
         display: block;
     }
 }
