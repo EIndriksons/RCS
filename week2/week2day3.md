@@ -1,3 +1,5 @@
+# Week 2 - Day 3
+
 # The Holy Grail Layout
 
 * https://en.wikipedia.org/wiki/Holy_grail_(web_design)
