@@ -11,6 +11,7 @@ Web Development Camp for May-June 2020 by [Riga Coding School.](https://rigacodi
   * [CSS Responsive Web Development](freecodecamp/4-css-responsive-web-dev.md)
   * [CSS Flexbox](freecodecamp/5-css-flexbox.md)
   * [CSS Grid](freecodecamp/6-css-grid.md)
+  * [CSS Sass](freecodecamp/7-css-sass.md)
 - [Week 1](/week1)
   * [Day 1](/week1/week1day1.md) - Introduction to Web Dev, Github
   * [Day 2](/week1/week1day2.md) - Visual Studio Code, Git
@@ -21,3 +22,4 @@ Web Development Camp for May-June 2020 by [Riga Coding School.](https://rigacodi
 - [Week 2](/week2)
   * [Day 3](/week2/week2day3.md) - CSS - Flexbox
 - [Homework 2](homework2) - CSS Grid and Layout
+- [Week 3](/week3)
