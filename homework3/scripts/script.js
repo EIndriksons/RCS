@@ -18,8 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // loop through all Main child elements and remove() them
         while (main.firstChild) {
             main.firstChild.remove();
-        }    
+        }
     }
+
+    // update slider values
+    document.querySelectorAll('.slider').forEach(slider => {
+        slider.oninput = () => {
+            slider.parentNode.querySelector('span').innerHTML = slider.value;
+        }
+    });
 });
 
 function createDiv(num) {
