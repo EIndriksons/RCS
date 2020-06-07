@@ -2,6 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // generate boxes
     document.querySelector('#generate').onclick = () => {
+
+        // check if Main container already contains div's (boxes)
+        if (document.querySelector('main').hasChildNodes()) {
+            clear(); // if contains => clear
+        }
+
         const minCount = document.querySelector('#min').value;
         const maxCount = document.querySelector('#max').value;
 
@@ -16,12 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // clear boxes
     document.querySelector('#clear').onclick = () => {
-        const main = document.querySelector('main')
-
-        // loop through all Main child elements and remove() them
-        while (main.firstChild) {
-            main.firstChild.remove();
-        }
+        clear();
     }
 
     // update slider values
@@ -58,4 +59,13 @@ function createDiv(i, fizz, buzz) {
 
     // adding div (box) template to main container
     document.querySelector('main').innerHTML += div;
+}
+
+function clear() {
+    const main = document.querySelector('main')
+
+    // loop through all Main child elements and remove() them
+    while (main.firstChild) {
+        main.firstChild.remove();
+    }
 }
