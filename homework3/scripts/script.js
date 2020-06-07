@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
             clear(); // if contains => clear
         }
 
-        const minCount = document.querySelector('#min').value;
-        const maxCount = document.querySelector('#max').value;
+        const minCount = parseInt(document.querySelector('#min').value);
+        const maxCount = parseInt(document.querySelector('#max').value);
 
-        const fizz = document.querySelector('#fizz input').value;
-        const buzz = document.querySelector('#buzz input').value;
+        const fizz = parseInt(document.querySelector('#fizz input').value);
+        const buzz = parseInt(document.querySelector('#buzz input').value);
 
         // generate minCount to maxCount amount of div's (boxes)
         for (let i = minCount; i <= maxCount; i++) {

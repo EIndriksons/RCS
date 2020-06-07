@@ -30,6 +30,10 @@ header div span {
     margin-left: 10px;
 }
 
+.min-max input {
+    width: 60px;
+}
+
 .slider {
     -webkit-appearance: none;
     appearance: none;
