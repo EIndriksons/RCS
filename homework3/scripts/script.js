@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // clear boxes
     document.querySelector('#clear').onclick = () => {
-        
+        const main = document.querySelector('main')
+        while (main.firstChild) {
+            main.firstChild.remove();
+        }    
     }
 });
 
