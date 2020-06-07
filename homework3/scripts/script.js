@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const buzz = document.querySelector('#buzz input').value;
 
         // generate minCount to maxCount amount of div's (boxes)
-        for (i = minCount; i <= maxCount; i++) {
+        for (let i = minCount; i <= maxCount; i++) {
             createDiv(i, fizz, buzz);
         }
     }
@@ -52,7 +52,7 @@ function createDiv(i, fizz, buzz) {
 
     // creating div (box) template
     const div = `
-        <div id="box${i}" class="box${typeClass}">${i}${typeName}</div>
+        <div id="box${i}" class="box${typeClass}"><p>${i}${typeName}</p></div>
     `
 
     // adding div (box) template to main container
