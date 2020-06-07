@@ -36,23 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Creates a Div's (Boxes)
 function createDiv(i, fizz, buzz) {
 
     let typeClass = '', typeName = '';
 
     // determine type
     if (i % fizz === 0 && i % buzz === 0) {
-        // FizzBuzz
-        typeClass = 'fizzbuzz'
-        typeName = ' - FizzBuzz'
+        typeClass = ' fizzbuzz', typeName = ' - FizzBuzz' // FizzBuzz
     } else if (i % fizz === 0) {
-        // Fizz
-        typeClass = 'fizz'
-        typeName = ' - Fizz'
+        typeClass = ' fizz', typeName = ' - Fizz' // Fizz
     } else if (i % buzz === 0) {
-        // Buzz
-        typeClass = 'buzz'
-        typeName = ' - Buzz'
+        typeClass = ' buzz', typeName = ' - Buzz' // Buzz
     }
 
     // creating div (box) template
@@ -64,6 +59,7 @@ function createDiv(i, fizz, buzz) {
     document.querySelector('main').innerHTML += div;
 }
 
+// Clears all existing Div's (Boxes)
 function clear() {
     const main = document.querySelector('main')
 
