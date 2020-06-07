@@ -2,7 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // generate boxes
     document.querySelector('#generate').onclick = () => {
-        createDiv();
+        const minCount = document.querySelector('#min').value;
+        const maxCount = document.querySelector('#max').value;
+
+        for (i = minCount; i < maxCount; i++) {
+            createDiv();
+        }
     }
 
     // clear boxes
