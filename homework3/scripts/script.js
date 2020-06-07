@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // generate boxes
+    // Generate boxes
     document.querySelector('#generate').onclick = () => {
 
         // check if Main container already contains div's (boxes)
@@ -20,13 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // clear boxes
-    document.querySelector('#clear').onclick = () => {
-        clear();
-    }
+    // Clear boxes
+    document.querySelector('#clear').onclick = () => clear();
 
-    // update slider values
+    // Slider values
     document.querySelectorAll('.slider').forEach(slider => {
+
+        // Initialize slider values
+        slider.parentNode.querySelector('span').innerHTML = slider.value;
+
+        // Update slider values
         slider.oninput = () => {
             slider.parentNode.querySelector('span').innerHTML = slider.value;
         }
