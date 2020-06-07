@@ -24,9 +24,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function createDiv(num) {
 
+    let typeClass = '', typeName = '';
+
+    // determine type
+    if (num % 3 === 0 && num % 5 === 0) {
+        // FizzBuzz
+        typeClass = 'fizzbuzz'
+        typeName = ' - FizzBuzz'
+    } else if (num % 3 === 0) {
+        // Fizz
+        typeClass = 'fizz'
+        typeName = ' - Fizz'
+    } else if (num % 5 === 0) {
+        // Buzz
+        typeClass = 'buzz'
+        typeName = ' - Buzz'
+    }
+
     // creating div (box) template
     const div = `
-        <div>Box No. ${num}</div>
+        <div id="box${num}" class="box${typeClass}">${num}${typeName}</div>
     `
 
     // adding div (box) template to main container
