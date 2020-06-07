@@ -5,9 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const minCount = document.querySelector('#min').value;
         const maxCount = document.querySelector('#max').value;
 
+        const fizz = document.querySelector('#fizz input').value;
+        const buzz = document.querySelector('#buzz input').value;
+
         // generate minCount to maxCount amount of div's (boxes)
         for (i = minCount; i <= maxCount; i++) {
-            createDiv(i);
+            createDiv(i, fizz, buzz);
         }
     }
 
@@ -29,20 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function createDiv(num) {
+function createDiv(i, fizz, buzz) {
 
     let typeClass = '', typeName = '';
 
     // determine type
-    if (num % 3 === 0 && num % 5 === 0) {
+    if (i % fizz === 0 && i % buzz === 0) {
         // FizzBuzz
         typeClass = 'fizzbuzz'
         typeName = ' - FizzBuzz'
-    } else if (num % 3 === 0) {
+    } else if (i % fizz === 0) {
         // Fizz
         typeClass = 'fizz'
         typeName = ' - Fizz'
-    } else if (num % 5 === 0) {
+    } else if (i % buzz === 0) {
         // Buzz
         typeClass = 'buzz'
         typeName = ' - Buzz'
@@ -50,7 +53,7 @@ function createDiv(num) {
 
     // creating div (box) template
     const div = `
-        <div id="box${num}" class="box${typeClass}">${num}${typeName}</div>
+        <div id="box${i}" class="box${typeClass}">${i}${typeName}</div>
     `
 
     // adding div (box) template to main container
