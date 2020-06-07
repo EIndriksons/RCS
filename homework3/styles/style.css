@@ -5,17 +5,29 @@ body {
 }
 
 header {
-    background-color: #C5CBE3;
     padding: 10px 0px 10px 0px;
+    background-color: #C5CBE3;
+    font-weight: bold;
 }
 
 header div {
-
     margin-top: 5px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+header div label {
+    margin-right: 10px;
+}
+
+#min {
+    margin-right: 10px;
+}
+
+header div span {
+    margin-left: 10px;
 }
 
 .slider {
@@ -79,6 +91,10 @@ main .box {
 
     min-height: 100px;
     background-color: #C5CBE3;
+}
+
+main .box:hover {
+    opacity: 0.7;
 }
 
 main .fizzbuzz {
