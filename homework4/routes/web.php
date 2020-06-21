@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Todo Routes
+Route::get('/tasks', 'TaskController@index');
+Route::post('/task', 'TaskController@store');
+Route::delete('/task/{task}', 'TaskController@destroy');
+
 // Authentication Routes
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
