@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // to get all users tasks
+    // we have to use hasMany() because there can be more tasks per each user
+    public function todos() {
+        return $this->hasMany(Todo::class);
+    }
 }
